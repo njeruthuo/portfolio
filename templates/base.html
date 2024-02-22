@@ -1,12 +1,11 @@
 <!-- templates/base.html -->
 
 <!DOCTYPE html>
-{% load static %}
-{% load custom_filters %}
+{% load static %} {% load custom_filters %}
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <script src="{% static 'js/main.js' %}"></script>
+
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,8 +25,27 @@
         'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
         'Helvetica Neue', sans-serif;
     "
-    class="min-h-screen bg-slate-50 dark:bg-black dark:text-white"
+    class="min-h-screen bg-slate-50 dark:bg-black dark:text-white relative"
   >
     {% block page_content %}{% endblock page_content %}
+    <button
+      style="
+        position: fixed;
+        right: 60px; /* Adjust the left position as needed */
+        bottom: 60px; /* Adjust the bottom position as needed */
+        z-index: 999;
+      "
+      id="whatsappButton"
+    >
+      <img
+        style="height: 64px; padding: 0; margin: 0"
+        src="{% static 'img/whatsapp.png' %}"
+        alt=""
+      />
+    </button>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/copyright.js' %}"></script>
+    <script src="{% static 'js/whatsapp.js' %}"></script>
   </body>
 </html>

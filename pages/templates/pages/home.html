@@ -2,284 +2,34 @@
 <!-- pages/templates/pages/home.html -->
 
 {% load static %}{% load custom_filters %} {% block page_content %}
-<header class="sticky top-0 z-10 bg-teal-700 text-white">
-  <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
-    <h1 class="text-3xl font-medium">
-      <a href="#hero">My Portfolio</a>
-    </h1>
-    <div>
-      <button
-        id="hamburger-button"
-        class="relative h-8 w-8 cursor-pointer text-3xl md:hidden"
-      >
-        <!-- &#9776; -->
-        <div
-          class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']"
-        ></div>
-      </button>
-      <nav class="hidden space-x-8 text-xl md:block" aria-label="main">
-        <a href="#rockets" class="hover:opacity-90">Projects</a>
-        <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
-        <a href="#contact" class="hover:opacity-90">Contact me</a>
-      </nav>
-    </div>
-  </section>
-  <section
-    id="mobile-menu"
-    class="top-68 justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-5xl"
-  >
-    <!-- <button class="text-8xl self-end px-6">
-                &times;
-            </button> -->
-    <nav
-      class="flex min-h-screen flex-col items-center py-8"
-      aria-label="mobile"
-    >
-      <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Home</a>
-      <a href="#rockets" class="w-full py-6 text-center hover:opacity-90"
-        >Projects</a
-      >
-      <a href="#testimonials" class="w-full py-6 text-center hover:opacity-90"
-        >Testimonials</a
-      >
-      <a href="#contact" class="w-full py-6 text-center hover:opacity-90"
-        >Contact me</a
-      >
-      <a href="#footer" class="w-full py-6 text-center hover:opacity-90"
-        >How to find me</a
-      >
-    </nav>
-  </section>
-</header>
+<!-- Contact icons -->
+{% include "icons.html" %}
+
+<!-- Navigation bar -->
+{% include "header.html" %}
 <main class="mx-auto max-w-4xl">
-  <section
-    id="hero"
-    class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
-  >
-    <article class="sm:w-1/2">
-      <h2
-        class="max-w-md text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-left sm:text-5xl"
-      >
-        Am Julius Njeru,
-        <span class="text-indigo-700 dark:text-indigo-300"
-          >a software developer</span
-        >.
-      </h2>
-      <p
-        class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left"
-      >
-        I am a passionate and talented young graduate who enjoys the art of
-        creating python applications using Django.
-      </p>
-      <!-- <p
-        class="mt-4 max-w-md text-center text-2xl text-slate-700 dark:text-slate-400 sm:text-left"
-      >
-        Think Acme Rockets.
-      </p> -->
-    </article>
-    <img class="w-1/2" src="{% static 'img/coder.png' %} " alt="Rocket Dab" />
-  </section>
+  <!-- Introduction -->
+  {% include "introduction.html" %}
 
   <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
-  <section
-    id="rockets"
-    class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6"
-  >
-    <h2
-      class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
-    >
-      My Projects
-    </h2>
-    <ul
-      class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row"
-    >
-      <!-- <div class="row">
-        {% for project in projects %}
-        <div class="col-md-4">
-          <div class="card mb-2">
-            {% if project.image %}
-            <img
-              class="card-img-top"
-              height="200px"
-              src="{{ project.image.url }}"
-            />
-            {% endif %}
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">{{ project.title }}</h5>
-              <p class="card-text flex-grow-1">{{ project.description }}</p>
-              <a
-                href="{{ project.get_absolute_url }}"
-                class="btn btn-primary mt-auto"
-              >
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div> -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {% for project in projects %}
-        <div
-          class="max-w-md mx-auto bg-white rounded-lg overflow-hidden shadow-md"
-        >
-          {% if project.image %}
-          <img
-            class="w-full h-64 object-cover object-center"
-            src="{{ project.image.url }}"
-            alt="Project Image"
-          />
-          {% endif %}
-          <div class="p-4">
-            <h5 class="text-xl font-semibold mb-2">{{ project.title }}</h5>
-            <p class="text-gray-700 text-base leading-snug">
-              {{ project.description }}
-            </p>
-          </div>
-          <div class="px-4 pb-4">
-            <a
-              href="{{ project.get_absolute_url }}"
-              class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
-            >
-              Read More
-            </a>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </ul>
-  </section>
+  <!-- About me -->
+  {% include "about.html" %}
 
   <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
-  <section
-    id="testimonials"
-    class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6"
-  >
-    <h2
-      class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
-    >
-      Testimonials
-    </h2>
-    <figure class="my-12">
-      <blockquote
-        class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black"
-      >
-        <p
-          class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl"
-        >
-          Delivers exceptional work within the required timeframe.
-        </p>
-      </blockquote>
-      <figcaption
-        class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl"
-      >
-        &#8212;Jeff, Lamwa VetCare.
-      </figcaption>
-    </figure>
-    <figure class="my-12">
-      <blockquote
-        class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black"
-      >
-        <p
-          class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl"
-        >
-          Easy to work with. He doesn't need reminders or much supervision.
-        </p>
-      </blockquote>
-      <figcaption
-        class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl"
-      >
-        &#8212;Derrick Shiberenje, ShoeSoko.
-      </figcaption>
-    </figure>
-    <figure class="my-12">
-      <blockquote
-        class="relative rounded-3xl bg-teal-600 py-12 pl-14 pr-8 dark:bg-black"
-      >
-        <p
-          class="mt-2 text-left text-2xl text-white before:absolute before:top-0 before:left-0 before:translate-x-2 before:translate-y-2 before:transform before:font-serif before:text-9xl before:text-white before:opacity-25 before:content-['\201C'] after:absolute after:-bottom-20 after:right-0 after:-translate-x-2 after:-translate-y-2 after:transform after:font-serif after:text-9xl after:text-white after:opacity-25 after:content-['\201D'] dark:text-slate-400 sm:text-3xl"
-        >
-          A very fast learner. He picked React under my mentorship and he was
-          already making simple applications within a week's time!
-        </p>
-      </blockquote>
-      <figcaption
-        class="mt-2 text-right text-xl italic text-slate-500 dark:text-slate-400 sm:text-2xl"
-      >
-        &#8212; Felex Onyango, Sibasi Ltd.
-      </figcaption>
-    </figure>
-  </section>
+  <!-- Projects -->
+  {% include "projects.html" %}
 
   <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
 
-  <section
-    id="contact"
-    class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-16 p-6"
-  >
-    <h2
-      class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
-    >
-      Contact me
-    </h2>
-    <form
-      action=""
-      class="items-left mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl"
-    >
-      <label for="subject">Subject:</label>
-      <input
-        type="text"
-        id="subject"
-        name="subject"
-        required
-        minlength="3"
-        maxlength="60"
-        placeholder="Your Subject"
-        class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
-      />
-      <label for="message">Message:</label>
-      <textarea
-        name="message"
-        id="message"
-        cols="30"
-        rows="10"
-        placeholder="Your Message"
-        required
-        class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
-      ></textarea>
-      <button
-        type="submit"
-        class="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
-      >
-        Reach out
-      </button>
-    </form>
-  </section>
+  <!-- Testimonials -->
+  {% include "testimonials.html" %}
+
+  <hr class="mx-auto w-1/2 bg-black dark:bg-white" />
+
+  <!-- Contact -->
+  {% include "contact-me.html" %}
 </main>
 
-<footer id="footer" class="bg-teal-700 text-xl text-white">
-  <section
-    class="mx-auto flex max-w-4xl flex-col p-4 sm:flex-row sm:justify-between"
-  >
-    <address>
-      <h2>Location: Thika, Nairobi</h2>
-      <a href="github.com/njeruthuo">My GitHub</a><br />
-      <!-- Fairfield, New Jersey 12345-5555<br /> -->
-      Email:
-      <a href="mailto:juliusn411@gmail.com.com">juliusn411@gmail.com</a><br />
-      Phone: <a href="tel:+15555555555">+254768585724</a>
-    </address>
-    <!-- <nav class="hidden flex-col gap-2 md:flex" aria-label="footer">
-      <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
-      <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
-      <a href="#contact" class="hover:opacity-90">Contact Us</a>
-    </nav> -->
-    <div class="flex flex-col sm:gap-2">
-      <p class="text-right">Copyright &copy; <span id="year">2024</span></p>
-      <p class="text-right">All Rights Reserved</p>
-    </div>
-  </section>
-</footer>
-{% endblock page_content %}
+{% include "footer.html" %} {% endblock page_content %}

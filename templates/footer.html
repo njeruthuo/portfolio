@@ -1,0 +1,44 @@
+{% load static %}
+
+<footer id="footer" class="bg-teal-700 text-xl text-white">
+  <section
+    class="mx-auto flex max-w-4xl flex-col p-4 sm:flex-row sm:justify-between"
+  >
+    <address>
+      <h2>Location: Thika, Nairobi</h2>
+      <div class="flex justify-between pt-3">
+        <span class="bg-teal-700"
+          ><a target="_blank" href="https://github.com/njeruthuo"
+            ><img
+              style="height: 22px; margin-right: 10px"
+              src="{% static 'img/github.png' %}"
+              alt="" /></a
+        ></span>
+        <span class="bg-teal-700"
+          ><a
+            target="_blank"
+            href="https://www.linkedin.com/in/julius-njeru-37158924b/"
+            ><img
+              style="height: 22px; margin-right: 10px"
+              src="{% static 'img/linkedin.png' %}"
+              alt="" /></a
+        ></span>
+        <span class="bg-teal-700"
+          ><a
+            class="bg-teal-700"
+            target="_blank"
+            href="mailto:juliusn411@gmail.com"
+            ><img
+              style="height: 22px; margin-right: 10px"
+              src="{% static 'img/email.png' %}"
+              alt="" /></a
+        ></span>
+      </div>
+    </address>
+
+    <div class="flex flex-col sm:gap-2">
+      <p class="text-right">Copyright &copy; <span id="year"></span></p>
+      <p class="text-right">All Rights Reserved</p>
+    </div>
+  </section>
+</footer>

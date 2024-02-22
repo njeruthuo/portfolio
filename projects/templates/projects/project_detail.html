@@ -1,19 +1,48 @@
+{% extends "base.html" %}
 <!-- projects/templates/projects/project_detail.html -->
 
-{% extends "base.html" %} {% block page_content %}
-<h1>{{ project.title }}</h1>
-<div class="row">
-  <div class="col-md-8">
-    {% if project.image %}
-    <img src="{{ project.image.url }}" width="100%" />
-    {% endif %}
-  </div>
-  <div class="col-md-4">
-    <h5>About the project:</h5>
-    <p>{{ project.description }}</p>
-    <br />
-    <h5>Technology used:</h5>
-    <p>{{ project.technology }}</p>
-  </div>
-</div>
+{% block title %} {{ project.title }} | Project details {% endblock title %}
+
+<!--  -->
+{% block page_content %}
+
+<section
+  class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6"
+>
+  <div class="mx-auto text-left text-white"><a href="{{ request.META.HTTP_REFERER }}">&lt; Back</a></div>
+  <h2
+    class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
+  >
+    {{ project.title }}
+  </h2>
+  <hr />
+  <section
+    class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
+  >
+    <article class="sm:w-1/2">
+      <h5>About the project:</h5>
+      <p
+        class="mt-4 max-w-md text-center text-xl text-slate-700 dark:text-slate-400 sm:text-left"
+      >
+        {{ project.description }}
+      </p>
+
+      <br />
+      <hr class="bg-black dark:bg-white" />
+      <br />
+      <h5 class="pt-4 underline text-xl text-slate-400">Technology used:</h5>
+      <p class="text-3xl">{{ project.technology }}</p>
+    </article>
+    <div class="col-md-8">
+      {% if project.image %}
+      <img
+        class="mx-auto w-1/2 rounded"
+        src="{{ project.image.url }}"
+        width="100%"
+      />
+      {% endif %}
+    </div>
+  </section>
+</section>
+
 {% endblock page_content %}

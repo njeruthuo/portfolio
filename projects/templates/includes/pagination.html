@@ -1,0 +1,32 @@
+<div class="flex justify-center gap-8">
+  <span class="step-links">
+    {% if page.has_previous %}
+    <a
+      class="text-slate-900 dark:text-white"
+      href="?page={{ page.previous_page_number }}#projects"
+      >Previous</a
+    >
+    {% endif %}
+    <span class="current">
+      Page {{ page.number }} of {{ page.paginator.num_pages }}.
+    </span>
+    {% if page.has_next %}
+    <a
+      class="text-slate-900 dark:text-white"
+      href="?page={{ page.next_page_number }}#projects"
+      >Next</a
+    >
+    <!-- <button
+      type="submit"
+      class="p-3 rounded-xl border border-solid border-slate-900 bg-teal-700 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
+    >
+      <a
+        class="text-slate-900 dark:text-white"
+        href="?page={{ page.next_page_number }}#projects"
+        >Next</a
+      >
+    </button> -->
+    {% endif %}
+  </span>
+</div>
+<!-- https://www.linkedin.com/in/julius-njeru-37158924b/ -->

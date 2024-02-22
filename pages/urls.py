@@ -5,4 +5,5 @@ from pages import views
 
 urlpatterns = [
     path("", views.home, name='home'),
+    path("open_cv/", views.open_cv, name='resume'),
 ]
