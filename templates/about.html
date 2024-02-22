@@ -10,7 +10,8 @@
     About me
   </h2>
   <section
-    class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex scroll-mt-40 flex-col-reverse items-center justify-center gap-8 p-6 sm:flex-row"
+    class="widescreen:section-min-height tallscreen:section-min-height mb-12 flex scroll-mt-40 flex-col items-center justify-center gap-8 p-6 sm:flex-row"
+    style="align-items: flex-start"
   >
     <article class="sm:w-1/2">
       <p
@@ -30,7 +31,8 @@
         <li>HTML5 & CSS3</li>
         <li>Django Rest framework</li>
       </ul>
-
+    </article>
+    <div class="flex flex-col items-center">
       <p
         class="mt-4 max-w-md text-center text-xl text-slate-700 dark:text-slate-400 sm:text-left mt-4"
       >
@@ -43,18 +45,13 @@
         <li>Excellent problem solving sills.</li>
         <li>Excellent troubleshooting and debugging skills.</li>
       </ul>
-    </article>
-    <div class="flex flex-col items-center">
-      <img
-        class="w-1/2"
-        src="{% static 'img/coder.png' %} "
-        alt="An Image here"
-      />
-      <button
-        class="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
-      >
-        <a href="{% url 'resume' %}" target="_blank">Check resume</a>
-      </button>
     </div>
   </section>
+  <div class="flex items-center justify-center">
+    <button
+      class="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
+    >
+      <a href="{% url 'resume' %}" target="_blank">Check resume</a>
+    </button>
+  </div>
 </section>

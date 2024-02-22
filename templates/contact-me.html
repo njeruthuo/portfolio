@@ -8,9 +8,11 @@
     Contact me
   </h2>
   <form
-    action="mailto:juliusn411@gmail.com"
+    method="post"
+    action="{% url 'projects:contact_form' %}"
     class="items-left mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl"
   >
+    {% csrf_token %}
     <label for="subject">Subject:</label>
     <input
       type="text"
@@ -20,6 +22,17 @@
       minlength="3"
       maxlength="60"
       placeholder="Your Subject"
+      class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
+    />
+    <label for="email">Email:</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      minlength="3"
+      maxlength="60"
+      placeholder="Your email address"
       class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
     />
     <label for="message">Message:</label>
@@ -32,11 +45,10 @@
       required
       class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
     ></textarea>
-    <button
+    <input
       type="submit"
       class="w-48 rounded-xl border border-solid border-slate-900 bg-teal-700 p-3 text-white hover:bg-teal-600 active:bg-teal-500 dark:border-none"
-    >
-      Reach out
-    </button>
+      value="Reach out"
+    />
   </form>
 </section>

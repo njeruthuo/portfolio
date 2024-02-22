@@ -1,9 +1,11 @@
 # projects/views.py
 
+from django.http import JsonResponse
 from projects.models import Project
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage, InvalidPage, Page
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage, InvalidPage
+from django.core.mail import send_mail
 
 
 def project_index(request):
@@ -30,3 +32,18 @@ def project_detail(request, title):
     return render(request, "projects/project_detail.html", {
         "project": project
     })
+
+
+def contact_form(request):
+    if request.method == 'POST':
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        email = request.POST.get('email')
+
+        # Code to send email goes here
+        send_mail(subject=subject, message=message, from_email=email, recipient_list=[
+                  'juliusn411@gmail.com', 'njeruthelearner@gmail.com'])
+
+        return redirect('home')
+    else:
+        return JsonResponse({'status': 'error'}, status=400)
