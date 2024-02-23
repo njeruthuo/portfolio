@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k&sp=&8efpb3jw9b86ufqyos$-+p0tq5-bg=h)=x-3#n-0n+9n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['njeruthuo.pythonanywhere.com', '.vercel.app', 'localhost']
 
