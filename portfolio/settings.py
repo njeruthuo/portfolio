@@ -1,6 +1,5 @@
 import os
 
-from django.core.mail.backends.console import EmailBackend
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -16,7 +15,7 @@ SECRET_KEY = 'django-insecure-k&sp=&8efpb3jw9b86ufqyos$-+p0tq5-bg=h)=x-3#n-0n+9n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['njeruthuo.pythonanywhere.com', '*']
+ALLOWED_HOSTS = ['njeruthuo.pythonanywhere.com', '.vercel.app', 'localhost']
 
 
 # Application definition
