@@ -10,7 +10,7 @@ from django.core.mail import send_mail
 
 def project_index(request):
     project_list = Project.objects.all()
-    paginator = Paginator(project_list, 3)
+    paginator = Paginator(project_list, 2)
     page_number = request.GET.get('page', 1)
 
     try:
