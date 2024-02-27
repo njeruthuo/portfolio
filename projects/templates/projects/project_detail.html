@@ -9,7 +9,9 @@
 <section
   class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6"
 >
-  <div class="mx-auto text-left text-white"><a href="{{ request.META.HTTP_REFERER }}">&lt; Back</a></div>
+  <div class="mx-auto text-left text-white">
+    <a href="{{ request.META.HTTP_REFERER }}">&lt; Back</a>
+  </div>
   <h2
     class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl"
   >
@@ -26,6 +28,17 @@
       >
         {{ project.description }}
       </p>
+
+      <br />
+      <span
+        ><a
+          target="_blank"
+          href="{{project.url}}"
+          ><img
+            style="height: 22px; margin-right: 10px"
+            src="{% static 'img/github.png' %}"
+            alt="" /></a
+      ></span>
 
       <br />
       <hr class="bg-black dark:bg-white" />
