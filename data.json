@@ -1,0 +1,435 @@
+[
+  {
+    "model": "projects.project",
+    "pk": 1,
+    "fields": {
+      "title": "YourPortfolio",
+      "description": "This is my latest project which allows me to share my portfolio website frontend template with other developers for a small token. The motivation behind the project was the realization that numerous developers had no portfolio websites and were too busy do develop one. So by creating a user app in extension to my portfolio app, I made a way for developers to create an account, upload their information and have their portfolio generated for them",
+      "technology": "Django, HTML, CSS",
+      "image": "project_images/Screenshot_from_2024-02-23_12-24-25.png",
+      "url": "https://github.com/njeruthuo/portfolio"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 2,
+    "fields": {
+      "title": "Django OCR app",
+      "description": "By deploying an already made AI application named Pytesseract into a django view, I managed to solve a problem that our class group were facing and that is converting images sent by lecturers to editable documents. I presented this project later as my final year project and got a clean A for problem solving abilities.",
+      "technology": "PyTesseract, Django",
+      "image": "project_images/Screenshot_from_2024-02-25_04-07-41.png",
+      "url": "https://github.com/njeruthuo/django-ocr"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 3,
+    "fields": {
+      "title": "Shoesoko project",
+      "description": "This is an ecommerce application that allowed me to learn Django's advanced features like session data management, asynchronous actions, message brokers, integration with third party APIs like Stripe for payment processing of Credit cards while meeting international standards, creating carts and much more.",
+      "technology": "Django, Celery, HTML",
+      "image": "project_images/Screenshot_from_2024-02-26_16-54-18.png",
+      "url": "https://github.com/njeruthuo/myshop"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 4,
+    "fields": {
+      "title": "coms-ltd",
+      "description": "Comms limited was a project of a fictious company renowed for selling internet bundles online. I was assigned this project by my Fiverr associate and it was one of my first projects to complete. I learned and mastered CRUD operations, and designing of complex database relationships.",
+      "technology": "Django, HTML, CSS",
+      "image": "project_images/Screenshot_from_2024-02-26_17-28-52.png",
+      "url": "https://github.com/njeruthuo/coms-ltd"
+    }
+  },
+  {
+    "model": "projects.project",
+    "pk": 5,
+    "fields": {
+      "title": "Blogger",
+      "description": "API developent (Django Rest Framework) by serializing of data models, generating dynamic canonical URLs from objects, integrating third party apps like taggit and django-jazzmin are some of the things I learned as I developed this project. Since I learn by doing, this project laid a firm foundation towards giving me a concrete understanding of the Django framework and coding in Python as well.",
+      "technology": "Django, HTML, CSS",
+      "image": "project_images/Screenshot_from_2024-01-07_21-03-31.png",
+      "url": "https://github.com/njeruthuo/blogger"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2024-02-26T15:17:34.052Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "1",
+      "object_repr": "YourPortfolio",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2024-02-26T15:21:16.500Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "2",
+      "object_repr": "Django OCR app",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2024-02-26T15:26:01.818Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "3",
+      "object_repr": "Shoesoko project",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2024-02-26T15:31:15.320Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "4",
+      "object_repr": "coms-ltd",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2024-02-26T15:35:30.592Z",
+      "user": 1,
+      "content_type": 1,
+      "object_id": "5",
+      "object_repr": "Blogger",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add project",
+      "content_type": 1,
+      "codename": "add_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change project",
+      "content_type": 1,
+      "codename": "change_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete project",
+      "content_type": 1,
+      "codename": "delete_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view project",
+      "content_type": 1,
+      "codename": "view_project"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 2,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 2,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 2,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 2,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 3,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 3,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 3,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 3,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 4,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 4,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 4,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 4,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 5,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 5,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 5,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 5,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 6,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 6,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 6,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 6,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 7,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 7,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 7,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 7,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$cIcsubOkqxic6N6U5WYm4N$l5Ki5Eq68aMmTBy3cRfG1Kkse9RguYPE2l35zmdd/+8=",
+      "last_login": "2024-02-26T15:12:35.690Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-02-26T15:12:28.584Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": { "app_label": "projects", "model": "project" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": { "app_label": "admin", "model": "logentry" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": { "app_label": "auth", "model": "permission" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": { "app_label": "auth", "model": "group" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": { "app_label": "auth", "model": "user" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": { "app_label": "contenttypes", "model": "contenttype" }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": { "app_label": "sessions", "model": "session" }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "ty723w99k3m7a0x01k8nso0op6vio1v9",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQBe_iGlm2179Q0nMGy9714gBKpDipEHeHSCmgfTPzXiLlbW1p63VJI4mz0OL0u5WMjzrtgO55us0S52ldxiJ3RR60y-tM9Xk53L-Dlnv71oFAcXRIEYszTg9MPkC2VRdVorEOPMZimT2EGphBI8HAzoAFhcaL9wflFjer:1receh:v2Kd2uNlfKtJGylPsma9ZUPfeC4ifs3ijgC2MRVpaRc",
+      "expire_date": "2024-03-11T15:12:35.792Z"
+    }
+  }
+]

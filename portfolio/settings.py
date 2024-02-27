@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-k&sp=&8efpb3jw9b86ufqyos$-+p0tq5-bg=h)=x-3#n-0n+9n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['njeruthuo.pythonanywhere.com', '.vercel.app', 'localhost']
 
@@ -65,24 +65,24 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         'PASSWORD': 'GC62-caC3dEea2F14c3F1BcG1d2*be5G',
-#         'HOST': 'roundhouse.proxy.rlwy.net', 'PORT': '43522'
-
-
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3'
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'GC62-caC3dEea2F14c3F1BcG1d2*be5G',
+        'HOST': 'roundhouse.proxy.rlwy.net', 'PORT': '43522'
+
+
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3'
+#     }
+# }
 
 
 # Password validation
@@ -121,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = BASE_DIR / 'static',
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 MEDIA_URL = "uploads/"
 MEDIA_ROOT = BASE_DIR / "uploads/"
