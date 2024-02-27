@@ -31,9 +31,7 @@
 
       <br />
       <span
-        ><a
-          target="_blank"
-          href="{{project.url}}"
+        ><a target="_blank" href="{{project.url}}"
           ><img
             style="height: 22px; margin-right: 10px"
             src="{% static 'img/github.png' %}"
@@ -49,6 +47,7 @@
     <div class="col-md-8">
       {% if project.image %}
       <img
+        alt="{{project.name}} image."
         class="mx-auto w-1/2 rounded"
         src="{{ project.image.url }}"
         width="100%"
